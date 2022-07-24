@@ -1,6 +1,6 @@
 import InMemoryDocument from './inMemory';
 import { type S3 } from 'aws-sdk';
-import { BaseConfig, JSONObject } from './types';
+import { BaseConfig, JSONObject } from '../types';
 
 export type S3Config = BaseConfig & {
   provider: 's3';

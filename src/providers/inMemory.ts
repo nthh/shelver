@@ -1,4 +1,4 @@
-import { BaseConfig, JSONObject } from './types';
+import { BaseConfig, JSONObject } from '../types';
 
 export type InMemoryConfig = BaseConfig & {
   provider: 'in-memory';
