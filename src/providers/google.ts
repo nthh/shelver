@@ -32,7 +32,11 @@ export default class GCPDocument<
   }
 
   override async set(data: T): Promise<void> {
-    await this.bucket.file(this.path).save(JSON.stringify(data));
+    await this.bucket.file(this.path).save(JSON.stringify(data), {
+      // https://github.com/googleapis/nodejs-storage/issues/807#issuecomment-590070540
+      // As files should be small, we can disable resumable uploads
+      resumable: false
+    });
   }
 
   override async delete(): Promise<void> {

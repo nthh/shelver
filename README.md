@@ -17,7 +17,7 @@ yarn add shelver
 #### Basic
 
 ```javascript
-const Storage = require('@google-cloud/storage').Storage;
+const { Storage } = require('@google-cloud/storage');
 const shelver = require('shelver');
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -98,9 +98,9 @@ type SomeType = {
   };
 };
 
-const docWithType = stock.document<SomeType>('some-name');
+const docWithType = shelf.document<SomeType>('some-name');
 // the following provides types and also stores the intial value into memory
-const docWithInferredType = stock.document('some-name', {
+const docWithInferredType = shelf.document('some-name', {
   key1: 1,
   key2: {
     subKey1: 'value',
