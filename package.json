@@ -10,7 +10,7 @@
     "url": "https://github.com/nthh/shelver.git"
   },
   "types": "./build/index.d.ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "devDependencies": {
     "@google-cloud/storage": "^6.2.3",
     "@types/node": "^18.0.6",
