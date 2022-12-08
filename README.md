@@ -69,7 +69,8 @@ const doc = shelver({
 }).document<Task>('tasks-to-process');
 
 // Underscore functions represent working with the cache
-// Mirror the normal methods synchronously (_get/_update/_set and _clear to make the object empty), along with async _load and _commit
+// Mirror the normal methods synchronously 
+// _get/_update/_set and _clear to make the object empty, along with async _load and _commit
 
 // Load data from S3 bucket into memory
 doc._load().then(() => {
